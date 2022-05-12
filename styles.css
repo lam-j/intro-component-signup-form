@@ -28,13 +28,16 @@ body {
 }
 
 .left {
-    color: white;
     margin: 30% 7% 20% 15%;
 }
 
 .title {
+    color: white;
     font-size: 3rem;
     line-height: 3.5rem;
+}
+.body {
+    color: rgba(255,255,255, 0.8);
 }
 
 .right {
@@ -45,7 +48,7 @@ body {
     background-color: var(--blue);
     border-radius: 10px;
     box-shadow: 0 7px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: rgba(255,255,255, 0.8);
     margin-bottom: 30px;
     padding: 5px 0;
     text-align: center;
@@ -81,12 +84,16 @@ body {
     background-color: var(--green);
     border: none;
     border-radius: 10px;
+    box-shadow: 0 3px hsl(154, 49%, 41%);
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     padding: 15px;
     text-transform: uppercase;
+}
+.sign-up button:hover {
+    opacity: 60%;
 }
 
 .agreement {
@@ -100,4 +107,39 @@ body {
 .agreement a {
     color: var(--red);
     text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("images/bg-intro-mobile.png");
+    }
+
+    .wrapper {
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
+
+    .left {
+        margin: 15% 0 0;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+    }
+
+    .right {
+        margin: 10% 0;
+    }
+
+    .tag {
+        padding: 5px 20%;
+    }
+
+    .agreement {
+        padding: 0 10% 10%;
+    }
 }

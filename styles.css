@@ -58,19 +58,24 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 7px rgba(0, 0, 0, 0.2);
-    padding: 7% 2.5% 22%;
+    padding: 7% 2.5% 20%;
 }
 
 .sign-up form {
     display: grid;
     grid-template-columns: 90%;
-    grid-template-rows: repeat(5, 1fr);
-    grid-row-gap: 10%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 7%;
     justify-content: center;
 }
 
+.sign-up div {
+    display: flex;
+    flex-direction: column;
+}
+
 .sign-up input {
-    border: 1px solid var(--grayishBlue);
+    border: 1px solid lightGray;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -100,13 +105,31 @@ body {
     color: var(--grayishBlue);
     font-size: .75rem;
     font-weight: 600;
-    position: relative;
-    top: 100px;
+    margin-top: 0;
+    padding: 0 30px;
     text-align: center;
 }
 .agreement a {
     color: var(--red);
     text-decoration: none;
+}
+
+.error {
+    background: url("images/icon-error.svg") no-repeat;
+    background-position: 95% 50%;
+}
+input.error {
+    border: 2px solid var(--red);
+}
+.error-text {
+    color: var(--red);
+    font-size: 12px;
+    font-style: italic;
+    margin-left: auto;
+}
+
+input.success {
+    border: 2px solid var(--green);
 }
 
 /* Media Queries */
@@ -140,6 +163,6 @@ body {
     }
 
     .agreement {
-        padding: 0 10% 10%;
+        padding: 0 10%;
     }
 }
